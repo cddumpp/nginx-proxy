@@ -25,7 +25,7 @@ RUN wget https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VER
  && rm /docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz
 
 COPY network_internal.conf /etc/nginx/
-
+COPY dhparam.pem.default /etc/nginx/dhparam/dhparam.pem
 COPY . /app/
 WORKDIR /app/
 
