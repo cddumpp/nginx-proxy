@@ -1,6 +1,11 @@
 dist: trusty
 sudo: required
 
+language: go
+
+
+services:
+- docker
 
 before_install:
   - sudo apt-get remove docker docker-engine
